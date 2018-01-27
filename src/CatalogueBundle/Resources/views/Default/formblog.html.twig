@@ -1,0 +1,43 @@
+{% extends '//base.html.twig' %}
+
+{% block body %}
+    {# Define CSS class and call #}
+    {# form_widget(f.commentToMutor, { 'attr': {'class': 'myclass'} }) }}
+#}
+    <h1 xmlns="http://www.w3.org/1999/html"> Create a new Post! </h1>
+
+    <div class="container">
+    <div class="well">
+         <table border="0">
+             <tr>
+                 <td>
+                     {{form_label(f.Author)}}
+                     {{form_errors(f.Author)}}
+                     {{form_widget(f.Author)}}
+
+                 </td>
+                 <td>
+                     {{form_label(f.mail)}}
+                     {{form_errors(f.mail)}}
+                     {{form_widget(f.mail)}}
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                 {{form_label(f.titreMessage)}}
+                 {{form_errors(f.titreMessage)}}
+                 {{form_widget(f.titreMessage)}}
+                 </td>
+             </tr>
+         </table>
+<br>
+
+                    <div class="col-lg-3">
+                         {{form_label(f.contenuMessage)}}
+                         {{form_errors(f.contenuMessage)}}
+                         {{form_widget(f.contenuMessage)}}
+                    </div>
+
+    </div>
+    </div>
+    {% endblock %}
